@@ -1,0 +1,29 @@
+{
+  "name": "myexpressapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "watch-sass": "node-sass  public/stylesheets/test.scss  public/stylesheets/test.css "
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.9.3",
+    "@azure/event-hubs": "^5.3.1",
+    "@azure/storage-blob": "^12.3.0",
+    "azure-iot-device": "^1.17.3",
+    "azure-iothub": "^1.13.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^5.2.0",
+    "formidable": "^1.2.2",
+    "googleapis": "^66.0.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

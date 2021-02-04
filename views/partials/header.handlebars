@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> --}}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+ 
+    <div class="fixed-header">
+        <div class="noti-container"> 
+          <input class="noti-logo" type="image" src="/images/noti.png" width="25px" height="25px" alt="Submit" />
+        </div>
+        <div class="chatbot-container"> 
+          <span id="dot" class="dot"></span>
+          <input id="chatbot" class="chatbot-logo" type="image" src="/images/chatbot.png" onclick="openChatBox()" width="40px" height="40px" alt="Submit" />
+          <div class="chatbot-box-anchor" id="chatbot-box-anchor"></div>
+          <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-box-display" id="chatbot-box-display">
+              <div class="msg-container" id="msg-container">
+                <p>Hello</p>
+              </div>
+              <div class="msg-dis" id="msg-dis"></div>
+              <div class="msg-container" id="msg-container">
+                <p>What is your problems ?</p>
+              </div>
+              <div class="msg-dis" id="msg-dis"></div>             
+            </div>
+
+            <input class="chatbot-box-input" id="chatbot-box-input"></input>
+            <button class="chatbot-box-btn" id="chatbot-box-btn" onclick="sendMsg()">send</button>
+          </div> 
+        </div>
+        <nav class="navbar" id="mainNav">
+    
+            <div class="nav-dropdown">
+              <button class="user-btn" id="user-name">User</button>
+              <div class="dropdown-content">
+                <a href="#">Setting</a>
+                <a href="#">Information</a>
+                <a href="/" >Log Out</a>
+              </div>
+          </div>
+          <div class="user-logo">
+              <img class="user-logo" src="/images/user.png" alt="Avatar" width="45px" height="45px"> 
+          </div>
+          
+        </nav>
+    </div>
+
+    <nav class="sidebar">
+      <div class="brand">
+        {{!-- <img class="navbar-logo" src="/images/kpmg.svg" width="120px" height="80px" > --}}
+        <a href="/"  class="navbar-brand">VACTRAK</a>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/">Home Page</a></li>
+        <li><a href="register">Register</a></li> 
+        <li><a href="">Symptoms Report</a></li>   
+        <li><a method="post" href="vaccinate">Vaccine Locations</a></li>        
+      </ul>
+      <div class="copyright-container">
+        <a>Copyright: something</a>
+        <br>
+        <a>Date: someday</a>
+      </div>
+    </nav>
+        
+
+    <script>
+      $("#chatbot").hover(function(){
+        $("#dot").css("background-color", "white");
+        }, function(){
+        $("#dot").css("background-color", "transparent");
+      });
+
+      function openChatBox() {
+        window.addEventListener('click', function(e){   
+          if (document.getElementById('chatbot').contains(e.target) || document.getElementById('chatbot-box').contains(e.target) || document.getElementById('chatbot-box-display').contains(e.target)){
+            document.getElementById("chatbot-box-anchor").style.display = "inline-block";
+            document.getElementById("chatbot-box").style.display = "inline-block";
+          } else{
+            document.getElementById("chatbot-box-anchor").style.display = "none";
+            document.getElementById("chatbot-box").style.display = "none";
+          }
+        });
+        
+      }
+
+      function sendMsg() {
+          var clone_msg = document.getElementById("msg-container");
+          var new_msg = clone_msg.cloneNode(true);
+          new_msg.querySelector("p").innerHTML = document.getElementById("chatbot-box-input").value;
+          new_msg.style.background = "#e2e2e2";
+          document.getElementById("chatbot-box-display").appendChild(new_msg);
+
+          var new_msg_dis = document.getElementById("msg-dis").cloneNode(true);
+          document.getElementById("chatbot-box-display").appendChild(new_msg_dis);
+      }
+   
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

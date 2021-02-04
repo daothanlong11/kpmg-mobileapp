@@ -1,0 +1,1297 @@
+body {
+    margin: 0;
+    background-color:#dfdfdf;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    position: fixed;
+    width: calc(100% - 300px);
+    height: 100%;
+    background-color: #ffffff;
+    top: 60px;
+    left: 18.75em;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 99;
+    display:none;
+    animation:fadeIn linear 0.2; 
+}
+
+.navbar-bottom-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: #2e2c2c;
+    top: 1em;
+    left: 2.7em;
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-bottom-background {
+    background-color: #ffffff !important;
+}
+
+.header-noti {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: #2e2c2c;   
+    top: 0.5em;
+    left: 0.7em;
+    display: none;
+}
+
+.header-chatbot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: #2e2c2c;   
+    top: 0.5em;
+    left: 0.5em;
+    display: none;
+}
+
+.sidebar-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: #2e2c2c;   
+    top: 1em;
+    right: 0.6em;
+    cursor: pointer;
+}
+
+.info-close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: #2e2c2c;   
+    top: 0.4em;
+    right: 1em;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.navbar-status-home {
+    position: relative;
+    top: 0;
+    left: 5px;
+    width: 160px;
+    height: 2px;
+    background-color: #2261df;
+    display: none;
+}
+
+.navbar-status-search {
+    position: relative;
+    top: 0;
+    left: 5px;
+    width: 160px;
+    height: 2px;
+    background-color: #2261df;
+    display: none;
+}
+
+.navbar-status-menu {
+    position: relative;
+    top: 0;
+    left: 5px;
+    width: 100px;
+    height: 2px;
+    background-color: #2261df;
+    display: none;
+
+}
+
+.navbar-status-home {
+    position: relative;
+    top: 0;
+    left: 5px;
+    width: 100px;
+    height: 2px;
+    background-color: #2261df;
+    display: none;
+
+}
+
+.navbar-status-search {
+    position: relative;
+    top: 0;
+    left: 5px;
+    width: 100px;
+    height: 2px;
+    background-color: #2261df;
+    display: none;
+
+}
+
+.sidebar__list {
+    margin-top: 24px;
+}
+
+.sidebar__link {
+    text-decoration :none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font: size 1.3em;
+    font-weight: bold;
+    position: relative;
+    left: 1em;
+}
+
+.sidebar__link-2 {
+    text-decoration :none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font: size 1.3em;
+    position: relative;
+    left: 1em;
+    left: 2em;
+}
+
+.sidebar-item {
+    position: relative;
+    left: 1em;
+    width: 220px;
+    border-radius: 10px;
+}
+
+.sidebar-item:hover {
+    background-color:#d8d8d8;
+}
+
+.menu-checkbox {
+    display:none;
+}
+
+.info-checkbox {
+    display:none;
+}
+
+.search-checkbox {
+    display:none;
+}
+
+.home-checkbox {
+    display:none;
+}
+
+.case-overview-sec {
+    height:4.5em;
+    background-color: white;
+}
+
+.vietnam-flag {
+    position: absolute;
+    left: -5px;
+    top: 1.6em;
+    width: 57px;
+    height:25px;
+}
+
+.vietnam-label {
+    position: absolute;
+    font-size: 0.8em;
+    left: 46px;
+    top: 2.5em;
+    font-weight: bold;
+}
+
+.border-right {
+    position: relative;
+    top: 0.5em;
+    left: 6.5em;
+    width: 1px;
+    height: 80%;
+    border-right: 1px solid rgb(182, 182, 182);
+}
+
+.border-2 {
+    top: -2em;
+}
+
+.case-overview-label {
+    display: inline;
+    position: relative;
+    font-size: 0.8em;
+    top: 1.5em;
+    left: 1em;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.case-overview-value {
+    display: inline;
+    position: relative;
+    font-size: 0.8em;
+    top: 1.5em;
+    left: 1em;
+}
+
+.value-2 {
+    position: relative;
+    top:3em;
+    left: -2em;
+}
+
+.search-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:1px;
+    border-style: solid;
+    border-color: #979797;
+    background-color: #ebebeb;
+  }
+
+  .search-box-location {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:1px;
+    border-style: solid;
+    border-color: #979797;
+    background-color: #ebebeb;
+}
+
+.vaccine-location-content1 {
+    content: "index" !important;
+}
+
+.vaccine-location-content2 {
+content: "City" !important;
+}
+
+.vaccine-location-content3 {
+    content: "Address" !important;
+}
+
+.vaccine-location-content4 {
+    content: "Working Time" !important;
+}
+
+.vaccine-location-content5:nth-child(5):before {
+    content: "Map" !important;
+}
+
+  .search-icon {
+      position: absolute;
+      top: 17px;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+  }
+
+
+/* //////////////////////////////////////////////////////////////////////// For PC /////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////// header ////////////////////////////////// */
+.header-nav {
+    position: fixed;
+    background-color:#ffffff;
+    top: 0;
+    left: 300px;
+    height: 60px;
+    width: calc(100% - 300px);
+}
+
+.user-box {
+    position: fixed;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    right:20px;
+
+}
+
+.user-name {
+    position: relative;
+    top: -2em;
+    left: 3em;
+    font-weight: bold;
+}
+
+.notification-box {
+    position :fixed;
+    width: 40px;
+    height:40px;
+    top: 0.4em;
+    background-color:transparent;
+    right: 200px;
+    cursor: pointer;
+    
+}
+
+.chatbot-box {
+    position :fixed;
+    width: 40px;
+    height:40px;
+    top: 0.4em;
+    background-color:transparent;
+    right: 270px;
+    cursor: pointer;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////////// sidebar //////////////////////////////////// */
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 18.75em;
+    background-color: #353a44 ;
+    display: block;
+}
+
+.brand {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    z-index: 999;
+}
+
+.brand-image {
+    position: absolute;
+    left: 25px;
+}
+
+.navbar-bottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    height: 5em;
+    width: 100%;
+    background-color: #ffffff ;
+    display: none;
+}
+
+.sidebar-content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////////// main //////////////////////////////////// */
+
+
+.case-overview {
+    padding-top: 0.25em;
+    height: 7em;
+    background-clip: content-box;
+}
+
+
+.case-overview-sections {
+    height: 7em;
+    background-clip: content-box;
+    background-color:transparent;
+}
+
+.content1 {
+    padding-top: 0em;
+    background-clip: content-box;
+    height: 56em;
+    background-color:transparent;
+    display: block;
+    z-index: 1;
+}
+
+
+.content2 {
+    position:absolute;
+    top:0.25em;
+    left: 0;
+    width: 100%;
+    height: 56em;
+    background-color:white;
+    display: block;
+    z-index: 100;
+}
+
+.profile-tab {
+    position:absolute;
+    top:0.25em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+.profile-tab-content1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color:transparent;
+}
+
+.profile-tab-content2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color:transparent;
+}
+
+.profile-tab-content1-user-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.profile-content1-line {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 1px;
+    height: 90%;
+    background-color: black;
+}
+
+.profile-tab-content1-user-qrcode {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.profile-user-image {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.profile-tab-content1-user-name {
+    position: relative;
+    top: 60%;
+    left: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.profile-tab-content1-user-age {
+    position: relative;
+    top: 60%;
+    left: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+.profile-tab-content1-user-sex {
+    position: relative;
+    top: 60%;
+    left: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+.profile-qrcode-image {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 35%;
+    object-fit: cover;
+}
+
+.profile-tab-content1-qrcode-title {
+    position: relative;
+    top: 15%;
+    left: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.profile-tab-content2-info {
+    position: relative;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    height: 10%;
+    background-color: transparent;
+}
+
+.content2-icon {
+    position: relative;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: -15%;
+}
+
+.profile-tab-content2-user-info {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 18px;
+}
+
+.update-profile-btn {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 50px;
+    height: 36px;
+    background-color: #548dd8;
+    border-radius: 5px;
+  
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  .edit-profile-btn {
+    position: absolute;
+    bottom: 30%;
+    left: 75%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 50px;
+    height: 36px;
+    background-color: #d14f4f;
+    border-radius: 5px;
+  
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.close-location-btn {
+    position: absolute;
+    bottom: 2%;
+    left: 70%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 50px;
+    height: 36px;
+    background-color: #d14f4f;
+    border-radius: 5px;
+  
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.update-medical-condition-btn {
+    position: absolute;
+    bottom: 25%;
+    left: 70%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 50px;
+    height: 36px;
+    background-color: #548dd8;
+    border-radius: 5px;
+  
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+.vaccine-location-tab {
+    position:absolute;
+    top:0.25em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    display: none;
+    z-index: 100;
+}
+
+.information-tab {
+    position:absolute;
+    top:0.25em;
+    left: 0;
+    width: 100%;
+    height: 39em;
+    background-color:white;
+    display: none;
+    z-index: 100;  
+    overflow: auto;
+}
+
+.information-content {
+    position: relative;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+.information-title {
+    position: relative;
+    top: 1%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.question {
+    position: relative;
+    width: 100%;
+    top: 3%;
+    left: 1%;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.answer {
+    position: relative;
+    width: 85%;
+    top: 3%;
+    left: 10%;
+    font-size: 16px; 
+    text-align: justify;  
+}
+
+.medical-condition-tab {
+    position:absolute;
+    top:0.25em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+.medical-condition-calendar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color:transparent
+}
+
+.medical-condition-report {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color:transparent
+}
+
+.medical-condition-calendar-month {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 2%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.medical-condition-calendar-content {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 10%;
+    bottom: 0;
+    right: 0;
+    overflow: hidden; 
+  }
+  
+  .medical-condition-calendar-content ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .medical-condition-calendar-content li {
+    float: left;
+    display: block;
+    width: 14.2857%;
+    text-align: center;
+    list-style-type: none;
+    line-height:180%;
+  }
+  
+  
+  .medical-condition-calendar-content li:nth-child(n+1):nth-child(-n+7) {
+    font-weight: 900;
+    color: #e67e22;
+  }
+  
+  .medical-condition-calendar-content li:nth-child(n+39) {
+    font-weight: 900;
+    color: rgba(0,0,0,.3);
+  }
+  
+  .medical-condition-calendar-content li:hover:nth-child(n+8):nth-child(-n+38),li:nth-child(12){
+    border-radius: 5px;
+    background-color: #548dd8;
+    color: #ecf0f1;
+  }
+
+  .medical-condition-report-title {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0%;
+    left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .cbx {
+    position: absolute;
+    left: 10%;
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+.row1 {
+    top: 8%;
+}
+
+.row2 {
+top: 16%;
+}
+
+.row3 {
+    top: 24%;
+}
+
+.row4 {
+    top: 32%;
+}
+
+.row5 {
+    top: 40%;
+}
+
+  .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+  }
+  .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098A9;
+    transition: all 0.2s ease;
+  }
+  .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+  }
+  .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #548dd8;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  .cbx span:last-child {
+    padding-left: 8px;
+  }
+  .cbx:hover span:first-child {
+    border-color: #548dd8;
+  }
+  
+  .inp-cbx:checked + .cbx span:first-child {
+    background: #548dd8;
+    border-color: #548dd8;
+    animation: wave 0.4s ease;
+  }
+  .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+  }
+  .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  @keyframes wave {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+  .wrap-input100 {
+    width: 80%;
+    position: relative;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 13px;
+    margin-bottom: 27px;
+    left: 10%;
+    top: 38%;
+  }
+
+  .validate-input {
+    position: relative;
+  }
+
+  .label-input100 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+    padding-left: 5px;
+  }
+
+  .input100 {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Poppins-Medium;
+    font-size: 14px;
+    color: #333333;
+    line-height: 0.9;
+    padding: 5px 5px;
+  }
+  .focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #7f7f7f;
+  }
+
+  .input100:focus + .focus-input100::before {
+    width: 100%;
+  }
+  
+  .has-val.input100 + .focus-input100::before {
+    width: 100%;
+  }
+  
+
+.p-value {
+    position: relative;
+    left: 100px;
+}
+
+.p-value-2 {
+    position: relative;
+    left: 20px;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-info {
+      position: relative;
+      width: 80%;
+      height: 10%;
+      top: 2%;
+      left: 10%;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 5px;
+  }
+
+  .map-info-content1 {
+      position: absolute;
+      background-color: transparent;
+      width: 20%;
+      height: 100%;
+      top: 0%;
+      left: 0;
+      
+  }
+
+  .map-info-content2 {
+    position: absolute;
+    background-color: transparent;
+    width: 20%;
+    height: 100%;
+    top: 0%;
+    left: 20%;
+    
+}
+
+.map-info-content3 {
+    position: absolute;
+    background-color: transparent;
+    width: 20%;
+    height: 100%;
+    top: 0%;
+    left: 40%;
+    
+}
+
+.map-info-content4 {
+    position: absolute;
+    background-color: transparent;
+    width: 20%;
+    height: 100%;
+    top: 0%;
+    left: 60%;
+    
+}
+
+.map-info-content5 {
+    position: absolute;
+    background-color: transparent;
+    width: 20%;
+    height: 100%;
+    top: 0%;
+    left: 80%;
+    
+}
+
+.dot1 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,255,0,0.2);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot2 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,255,0,0.4);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot3 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,255,0,0.6);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot4 {
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,255,0,0.8);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot5 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,255,0,1);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.map-info-value {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    font-size: 12px;
+}
+
+
+/* .map {
+    position:absolute;
+    top: 9em;
+    left: 1em;
+    width: 48%;
+    height: 50em;
+    background-color:red;
+}
+
+.search-city-box {
+    position:absolute;
+    top: 9em;
+    right: 4em;
+    width: 40%;
+    height: 20em;
+    background-color:red;
+}
+
+.new-box {
+    position:absolute;
+    top: 9em;
+    right: 4em;
+    width: 40%;
+    height: 28em;
+    background-color:red;
+} */
+
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+/* //////////////////////////////////////////////////// For SmartPhone ///////////////////////////////////////////////////////////////////// */
+
+@keyframes fadeIn {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+
+@media (max-width:739px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0px;
+        width: 250px;
+        height: 100%;
+        display: block;
+        z-index: 999;
+        background-color:#fff;
+        transform: translateX(100%);
+        transition: transform linear 0.2s;
+    }
+
+
+    .content2 {
+        display: none;
+        width: 100%;
+        height: calc(100% - 70px);
+    }
+
+    .content2-display {
+        display: block;
+    }
+
+    .content1 {
+        height:38em;
+    }
+
+    .navbar-bottom {
+        display: block;
+        z-index: 999;
+    }
+
+    .user-box {
+       position: absolute;
+       top: 1em;
+       left: 1em;
+    }
+
+    .main {
+        width:100%;
+        height:calc(100% - 60px);
+        top: 50px;
+        left: 0;
+    }
+
+  
+
+    .case-overview {
+        height: 5em;
+    }
+    
+
+    .case-overview-sections {
+        height: 4.5em;
+        background-color:white;
+        
+    }
+
+    .navbar-bottom-section{
+        height: 5em;
+        text-align: center;
+        color: #fff;
+    }
+
+    .user-box {
+        width: 100px;
+        right:35%;
+    }
+
+    .notification-box {
+        right: 10px;
+    
+    }
+
+    .chatbot-box {
+        right: 60px;
+        
+    }
+
+    .header-nav {
+        width:100%;
+        height: 50px;
+        left: 0;
+    }
+
+
+    .navbar-bottom-icon {
+   
+        display: block;
+    }
+
+    .header-noti {
+  
+        display: block;
+    }
+
+    .header-chatbot {
+      
+        display: block;
+    }
+
+    .brand {
+        position: fixed;
+        top: 0;
+        left: 8.5em;
+        height: 50px;
+    }
+
+   
+
+
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
