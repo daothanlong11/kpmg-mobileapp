@@ -6,6 +6,11 @@
     <title>VACTRAK</title>
 
     <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/home-functions.css">
+    <link rel="stylesheet" href="/stylesheets/booking.css">
+    <link rel="stylesheet" href="/stylesheets/history.css">
+    <link rel="stylesheet" href="/stylesheets/new.css">
+    <link rel="stylesheet" href="/stylesheets/covid.css">
     <link rel="stylesheet" href="/stylesheets/grid.css">
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
@@ -29,7 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/util.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
     
-    <script src="/javascripts/home.js"></script>
+    <script src="/javascripts/booking.js"></script>
 
 </head>
 <body>
@@ -132,23 +137,36 @@
                         <div id="case-overview" class="case-overview-sections col l-3 c-12">
                             <div class="row">
                                 <div class="case-overview-sec col c-3">
-                                    <img class="vietnam-flag" src="/images/vietnam.png">
-                                    <p class="vietnam-label">Viet Nam</p>
-                                    <div class="border-right"></div>
-                                </div> 
-                                <div class="case-overview-sec col c-3">
-                                    <p class="case-overview-label">Total cases</p>
-                                    <p class="case-overview-value">1.882</p>
-                                    <div class="border-right border-2"></div>
+                                    <label for="booking-checkbox" class="navbar-functions-icon">               
+                                        <img class="function-image-1" src="/images/booking.png">
+                                    </label>
+                                    <input type="checkbox" name="" class="function-checkbox" id="booking-checkbox" onclick="booking_check()">
+                                    <p class="function-name-1">Vaccines Booking</p>
+                                    <div id="function-status-1"class="function-status-1"></div>
                                 </div>
                                 <div class="case-overview-sec col c-3">
-                                    <p class="case-overview-label">Recovered</p>
-                                    <p class="case-overview-value">1.460</p>
-                                    <div class="border-right border-2"></div>
+                                    <label for="history-checkbox" class="navbar-functions-icon">               
+                                        <img class="function-image-2" src="/images/search_history.png">
+                                    </label>
+                                    <input type="checkbox" name="" class="function-checkbox" id="history-checkbox" onclick="history_check()">
+                                    <p class="function-name-2">Injection History</p>
+                                    <div id="function-status-2"class="function-status-2"></div>
                                 </div>
                                 <div class="case-overview-sec col c-3">
-                                    <p class="case-overview-label">Deaths</p>
-                                    <p class="case-overview-value value-2">35</p>
+                                    <label for="price-checkbox" class="navbar-functions-icon">               
+                                        <img class="function-image-3" src="/images/news.png">
+                                    </label>
+                                    <input type="checkbox" name="" class="function-checkbox" id="price-checkbox" onclick="new_check()">
+                                    <p class="function-name-3">News</p>
+                                    <div id="function-status-3"class="function-status-3"></div>
+                                </div>
+                                <div class="case-overview-sec col c-3">
+                                    <label for="covid-checkbox" class="navbar-functions-icon">               
+                                        <img class="function-image-4" src="/images/covid.png">
+                                    </label>
+                                    <input type="checkbox" name="" class="function-checkbox" id="covid-checkbox" onclick="covid_check()">
+                                    <p class="function-name-4">Covid Vaccines</p>
+                                    <div id="function-status-4"class="function-status-4"></div>
                                 </div>
                             </div>
                         </div>
@@ -181,6 +199,10 @@
                                 <span class="dot5"></span>
                                 <p class="map-info-value">80-100%</p>
                             </div>
+                    </div>
+
+                    <div class="map-label">
+                        <p class="map-info-label">Covid Vaccinated Map</p>
                     </div>
                 </div>
 
@@ -270,6 +292,136 @@
                             </table>
                         </div>
                     </div>
+                </div>
+
+                <div id="content3" class="content3 col l-5 c-12">
+                    <div  class="login100-form validate-form">
+                        
+
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter Vaccination Code">
+                            <input id="vaccination_code" class="input100" type="text" name="vaccination_code">
+                            <span class="focus-input100" data-placeholder="Vaccination Code"></span>
+                        </div>
+                   
+                        <div class="container-login100-form-btn">
+                            <button onclick="skip_button()"  class="login100-form-btn1">
+                                Skip
+                            </button>
+                            <button onclick="confirm_button()"  class="login100-form-btn2">
+                                Confirm
+                            </button>
+                        </div>
+                      
+                    </div>
+                  
+                </div>
+
+                <div id="content4" class="content4 col l-5 c-12">
+                    <div  class="login100-form validate-form">
+                        
+
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter Vaccination Code">
+                            <input id="vaccination_code" class="input100" type="text" name="vaccination_code">
+                            <span class="focus-input100-2" data-placeholder="Vaccination Code/ Phone Number"></span>
+                        </div>
+                   
+                        <div class="container-login100-form-btn">
+
+                            <button onclick="confirm_history_button()"  class="login100-form-btn4">
+                                Find
+                            </button>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div id="content5" class="content3 col l-5 c-12">
+                    
+                </div>
+
+                <div id="content6" class="content3 col l-5 c-12">
+                    
+                </div>
+
+                <div id="booking-content" class="booking-content col l-5 c-12">
+                    <p class="booking-content-label">Vaccination Register</p>
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">Full Name: </p>
+                        <input id="booking-fullname" class="input100-booking" type="text" placeholder="ex: Nguyen Van A">
+                        <span class="focus-input100-booking"></span>
+                    </div>
+
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">Day of Birth: </p>
+                        <input id="booking-birth" class="input100-booking" type="text" placeholder="ex: 01-01-2000">
+                        <span class="focus-input100-booking"></span>
+                    </div>
+
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">Gender: </p>
+                        <select class="booking-input-gender" name="gender" id="booking-gender">
+                            <option value="Genders">Genders</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>                           
+                        </select> 
+                    </div>
+
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">Phone: </p>
+                        <input id="booking-phone" class="input100-booking" type="text" placeholder="ex: 0903xxxxxx">
+                        <span class="focus-input100-booking"></span>
+                    </div>
+
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">Email: </p>
+                        <input id="booking-email" class="input100-booking" type="text" placeholder="ex: nguyenvana@gmail.com">
+                        <span class="focus-input100-booking"></span>
+                    </div>
+
+                    <div class="booking-input-feild col c-12">
+                        <p class="booking-label">City: </p>
+                        <select class="booking-input-address" id="booking-city" >
+                            <option value="">Province / City</option>
+                            <option value="hochiminh">Ho Chi Minh</option>
+                        </select>                       
+                        
+                    </div>
+
+                     <div class="booking-input-feild col c-12">
+                        <p class="booking-label">District: </p>
+                        <select class="booking-input-address" id="booking-district" >
+                            <option value="">District</option>
+                            <option value="1">District 1</option>
+                            <option value="2">District 2</option>
+                            <option value="3">District 3</option>
+                            <option value="4">District 4</option>
+                            <option value="5">District 5</option>
+                            <option value="6">District 6</option>
+                            <option value="7">District 7</option>
+                            <option value="8">District 8</option>
+                            <option value="9">District 9</option>
+                            <option value="10">District 10</option>
+                            <option value="11">District 11</option>
+                            <option value="12">District 12</option>
+                            <option value="thuduc">Thu Duc</option>
+                            <option value="tanbinh">Tan Binh</option>
+                            <option value="binhchanh">Binh Chanh</option>
+                            <option value="binhtan">Binh Tan</option>
+                            <option value="phunhuan">Phu Nhuan</option>
+                            <option value="govap">Go Vap</option>
+                            <option value="binhthanh">Binh Thanh</option>
+                        </select>
+                        
+                    </div>
+
+                    <button onclick="next_button()"  class="login100-form-btn3">
+                        Save
+                    </button>
+                </div>
+
+                <div id="booking-content-vaccines" class="booking-content-vaccines col l-5 c-12">
+                    
                 </div>
 
                 <div id="profile-tab" class="profile-tab col c-12">
@@ -570,6 +722,17 @@
         }
 
         function menu_check() {
+            document.getElementById("function-status-1").style.display = "none";
+            document.getElementById("function-status-2").style.display = "none";
+            document.getElementById("function-status-3").style.display = "none";
+            document.getElementById("function-status-4").style.display = "none";
+
+            document.getElementById("content3").style.display = "none"
+            document.getElementById("content4").style.display = "none"
+            document.getElementById("content5").style.display = "none"
+            document.getElementById("content6").style.display = "none"
+            document.getElementById("booking-content").style.display = "none"
+
             //var menu_checked = document.getElementById("navbar-menu-checkbox");
             var overlay = document.getElementById("overlay");
             var home_status = document.getElementById("navbar-status-home"); 
@@ -588,6 +751,17 @@
         }
 
         function search_check() {
+            document.getElementById("function-status-1").style.display = "none";
+            document.getElementById("function-status-2").style.display = "none";
+            document.getElementById("function-status-3").style.display = "none";
+            document.getElementById("function-status-4").style.display = "none";
+
+            document.getElementById("content3").style.display = "none"
+            document.getElementById("content4").style.display = "none"
+            document.getElementById("content5").style.display = "none"
+            document.getElementById("content6").style.display = "none"
+            document.getElementById("booking-content").style.display = "none" 
+
             var search_check = document.getElementById("navbar-search-checkbox");
             var home_status = document.getElementById("navbar-status-home"); 
             var search_status = document.getElementById("navbar-status-search"); 
@@ -617,6 +791,17 @@
         }
 
         function home_check() {
+            document.getElementById("function-status-1").style.display = "none";
+            document.getElementById("function-status-2").style.display = "none";
+            document.getElementById("function-status-3").style.display = "none";
+            document.getElementById("function-status-4").style.display = "none";
+
+            document.getElementById("content3").style.display = "none"
+            document.getElementById("content4").style.display = "none"
+            document.getElementById("content5").style.display = "none"
+            document.getElementById("content6").style.display = "none"
+            document.getElementById("booking-content").style.display = "none"
+
             var home_check = document.getElementById("navbar-home-checkbox");
             var home_status = document.getElementById("navbar-status-home"); 
             var search_status = document.getElementById("navbar-status-search"); 
@@ -833,5 +1018,7 @@
    
       
     </script>
+
+
 </body>
 </html>
