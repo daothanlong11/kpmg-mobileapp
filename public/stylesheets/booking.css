@@ -5,7 +5,7 @@
     top:5em;
     left: 0;
     width: 100%;
-    height: calc(100% - 145px);
+    height: calc(100% - 140px);
     background-color:white;
     display: block;
     z-index: 100; 
@@ -176,7 +176,7 @@ border-bottom: 2px solid #d9d9d9;
 
 .login100-form-btn4 {
     font-family: Poppins-Medium;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
@@ -189,9 +189,10 @@ border-bottom: 2px solid #d9d9d9;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 0 20px;
-    right: 0%;
-    width: 50%;
+    padding: 0 0px;
+    right: -15%;
+    top: 10%;
+    width: 70%;
     height: 50px;
     background-color: #57b846;
     border-radius: 25px;
@@ -215,6 +216,50 @@ border-bottom: 2px solid #d9d9d9;
     -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
     -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
     -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+}
+
+.login100-form-btn5 {
+  font-family: Poppins-Medium;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 0px;
+  right: -15%;
+  top: 15%;
+  width: 70%;
+  height: 40px;
+  background-color: #57b846;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px 0px rgba(62, 194, 50, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(62, 194, 50, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(62, 194, 50, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(62, 194, 50, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(62, 194, 50, 0.5);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn5:hover  {
+  background-color: #333333;
+  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
 }
 
 .m-t-85 {margin-top: 85px;}
@@ -304,11 +349,10 @@ border-bottom: 2px solid #d9d9d9;
     top:5em;
     left: 0;
     width: 100%;
-    height: calc(100% - 145px);
+    height: calc(100% - 140px);
     background-color:white;
-    display: block;
-    z-index: 100; 
     display: none;
+    z-index: 100; 
 }
 
 .booking-input-feild  {
@@ -337,7 +381,7 @@ border-bottom: 2px solid #d9d9d9;
 .booking-input-gender{
     position: absolute;
     width:50%;
-    height: 50%;
+    height: 60%;
     top:35%;
     left:30%;
     background-color: transparent;
@@ -347,7 +391,7 @@ border-bottom: 2px solid #d9d9d9;
 .booking-input-address{
     position: absolute;
     width:50%;
-    height: 50%;
+    height: 60%;
     top:35%;
     left:30%;
     background-color: transparent;
@@ -453,11 +497,10 @@ border-bottom: 2px solid #d9d9d9;
     top:5em;
     left: 0;
     width: 100%;
-    height: calc(100% - 145px);
+    height: calc(100% - 135px);
     background-color:white;
-    display: block;
+    display: block ;
     z-index: 100; 
-    display: none;
 }
 
 .focus-input100-2 {
@@ -525,3 +568,146 @@ border-bottom: 2px solid #d9d9d9;
   .has-val.input100 + .focus-input100-2::before {
     width: 100%;
 }
+
+.booking-content-vaccines-option {
+  position: relative;
+  background-color: transparent;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+}
+
+.booking-content-vaccines-doses {
+  position: relative;
+  background-color: transparent;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.booking-content-vaccines-locations {
+  position: relative;
+  background-color: transparent;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.booking-content-vaccines-date {
+  position: relative;
+  background-color: transparent;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.booking-content-vaccines-option-label{
+  position: relative;
+  top: 10%;
+  left: 5%;
+  font: 14px;
+  font-weight:bold ;
+}
+
+.booking-content-vaccines-option-1-label{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  font: 14px;
+  
+}
+
+.booking-content-vaccines-option-2-label{
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  font: 14px;
+  
+}
+
+.booking-content-vaccines-option-1{
+  position: absolute;
+  bottom: 60%;
+  left: 48%;
+}
+
+.booking-content-vaccines-option-2{
+  position: absolute;
+  bottom: 60%;
+  left: 84%;
+  
+}
+
+.booking-content-vaccines-doses-label{
+  position: relative;
+  top: 10%;
+  left: 5%;
+  font: 14px;
+  font-weight:bold ;
+}
+
+.booking-content-vaccines-locations-label{
+  position: relative;
+  top: 10%;
+  left: 5%;
+  font: 14px;
+  font-weight:bold ;
+}
+
+.booking-content-vaccines-date-label{
+  position: relative;
+  top: 10%;
+  left: 5%;
+  font: 14px;
+  font-weight:bold ;
+}
+
+.booking-content-vaccines-doses-menu-1{
+  position: absolute;
+  width:80%;
+  height: 30%;
+  top:35%;
+  left:10%;
+  background-color: transparent;
+  padding:5px;
+  display: block;
+}
+
+.booking-content-vaccines-doses-menu-2{
+  position: absolute;
+  width:80%;
+  height: 30%;
+  top:35%;
+  left:10%;
+  background-color: transparent;
+  padding:5px;
+  display: none;
+}
+
+
+.booking-content-vaccines-locations-menu{
+  position: absolute;
+  width:80%;
+  height: 30%;
+  top:35%;
+  left:10%;
+  background-color: transparent;
+  padding:5px;
+  display: block;
+}
+
+
+
+
+
+.booking-content-vaccines-date-inject{
+  position: relative;
+  left: 10%; 
+  top:20%;
+}
+
+

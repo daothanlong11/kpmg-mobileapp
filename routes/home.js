@@ -30,6 +30,121 @@ var inject_data = {
   }
 }
 
+var single_dose_location = {
+  "s1": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "s2": [
+    "Location 1",
+    "Location 2",
+    "Location 4",
+    "Location 5",
+  ],
+  "s3": [
+    "Location 1",    
+    "Location 3",   
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "s4": [
+    "Location 3",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "s5": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "s6": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 4",
+    "Location 5",
+  ],
+  "s7": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+}
+
+var combo_dose_location = {
+  "c1": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "c2": [
+    "Location 1",
+    "Location 2",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "c3": [
+    "Location 1",    
+    "Location 3",   
+    "Location 6",
+    "Location 8"
+  ],
+  "c4": [
+    "Location 3",
+    "Location 4",
+    "Location 5",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+  "c5": [
+    "Location 1",
+    "Location 2",
+    "Location 8"
+  ],
+  "c6": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 4",
+    "Location 5",
+  ],
+  "c7": [
+    "Location 1",
+    "Location 2",
+    "Location 3",
+    "Location 6",
+    "Location 7",
+    "Location 8"
+  ],
+}
+
 
 router.get("/", function (req, res) {
   //res.send("download command received");
@@ -54,5 +169,15 @@ router.post("/confirm", function(req, res){
     res.send("undefined");
   }
 });
+
+router.post("/single_dose", function(req,res){
+  var single_dose_code = req.body.single_dose_code;
+  res.send(single_dose_location[single_dose_code]);
+})
+
+router.post("/combo_dose", function(req,res){
+  var combo_dose_code = req.body.combo_dose_code;
+  res.send(combo_dose_location[combo_dose_code]);
+})
 
 module.exports = router;

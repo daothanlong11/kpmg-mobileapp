@@ -321,7 +321,7 @@
                         
 
                         <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter Vaccination Code">
-                            <input id="vaccination_code" class="input100" type="text" name="vaccination_code">
+                            <input id="vaccination_code_history" class="input100" type="text" name="vaccination_code">
                             <span class="focus-input100-2" data-placeholder="Vaccination Code/ Phone Number"></span>
                         </div>
                    
@@ -415,13 +415,62 @@
                         
                     </div>
 
-                    <button onclick="next_button()"  class="login100-form-btn3">
-                        Save
+                    <button onclick="next_button()"  class="login100-form-btn4">
+                        Next >>
                     </button>
                 </div>
 
+            
                 <div id="booking-content-vaccines" class="booking-content-vaccines col l-5 c-12">
-                    
+                    <div class="booking-content-vaccines-option">
+                        <p class="booking-content-vaccines-option-label">Option: </p>
+                        <p class="booking-content-vaccines-option-1-label">Single Dose</p>
+                        <p class="booking-content-vaccines-option-2-label">Combo Dose</p>
+                        <input class="booking-content-vaccines-option-1" id="vaccines-option-1" type="checkbox" checked onclick="single_dose()"/>
+                        <input class="booking-content-vaccines-option-2" id="vaccines-option-2" type="checkbox" onclick="combo_dose()"/>
+                    </div>
+
+                    <div class="booking-content-vaccines-doses">
+                        <p class="booking-content-vaccines-doses-label">Dose: </p>
+                        <select onchange="choose_single_dose()" class="booking-content-vaccines-doses-menu-1" id="booking-content-vaccines-doses-menu-1">
+                            <option  value="none">Single Doses Menu</option>  
+                            <option value="s1">Lao</option>  
+                            <option value="s2">Sởi</option>
+                            <option value="s3">Thủy Đậu</option>
+                            <option value="s4">Phòng Uốn Ván</option>
+                            <option value="s5">Viêm Não Nhật Bản</option>
+                            <option value="s6">Phòng Dại</option>
+                            <option value="s7">Ung Thu Cổ Tử Cung</option>                           
+                        </select>
+                        <select onchange="choose_combo_dose()" class="booking-content-vaccines-doses-menu-2" id="booking-content-vaccines-doses-menu-2" >
+                            <option value="none">Combo Doses Menu</option> 
+                            <option value="c1">Gói dành cho trẻ em 0-12 tháng</option> 
+                            <option value="c2">Gói dành cho trẻ em 0-24 tháng</option>
+                            <option value="c3">Gói dành cho trẻ em 12-24 tháng</option>
+                            <option value="c4">Gói dành cho tiểu học đường</option>
+                            <option value="c5">Gói dành cho vị thành niên</option>
+                            <option value="c6">Gói dành cho người trưởng thành</option>
+                            <option value="c7">Gói dành cho phụ nữ trước khi sinh</option>
+                                                   
+                        </select>
+                    </div>
+
+                    <div class="booking-content-vaccines-locations">
+                        <p class="booking-content-vaccines-locations-label">Location: </p>
+                        <select class="booking-content-vaccines-locations-menu" id="booking-content-vaccines-locations-menu" >
+                            <option value="">Locations Menu</option>                     
+                        </select>
+                        
+                    </div>
+
+                    <div class="booking-content-vaccines-date">
+                        <p class="booking-content-vaccines-date-label">Injection Date: </p>
+                        <input type="date" id="booking-content-vaccines-date-inject" class="booking-content-vaccines-date-inject" value="mm-dd-yyyy">
+                    </div>
+
+                    <button onclick="payment_button()"  class="login100-form-btn5">
+                        Proceed to Payment >>
+                    </button>
                 </div>
 
                 <div id="profile-tab" class="profile-tab col c-12">
